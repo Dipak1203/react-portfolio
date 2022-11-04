@@ -1,0 +1,408 @@
+/* This styles content all pages styled */
+
+/* ==================== Start About Page */
+
+#about h2,
+h5 {
+  text-align: center;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  display: grid;
+  place-content: center;
+}
+
+.about__me__image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition);
+}
+
+.about__me__image:hover {
+  transform: rotate(0deg);
+  transition: var(--transition);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about__card:hover {
+  background: transparent;
+  border-color: var(--color-bg-variant);
+  cursor: pointer;
+}
+
+.about__icon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about__card h5 {
+  font-size: 0.95rem;
+}
+
+.about__card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.about__content p {
+  margin: 2rem 0 2.6rem;
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about__me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  #about {
+    height: 160vh;
+  }
+  .about__me {
+    width: 65%;
+    margin: 0 auto 3rem;
+  }
+  .about__cards {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .about__content {
+    /* text-align: center; */
+  }
+  .about__content p {
+    margin: 1.5rem 0;
+  }
+}
+
+/* End of about section */
+
+/* Staring with Experience page */
+
+#experience h5,
+h2 {
+  text-align: center;
+}
+
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.experience__container > div {
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+}
+
+.experience__container > div:hover {
+  background: transparent;
+  border-color: var(--color-bg-variant);
+  cursor: default;
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.experience__details__icon {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+@media screen and (max-width: 1024px) {
+  #experience {
+    /* margin-top: 31rem; */
+  }
+
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .experience__content {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #experience {
+    margin-top: 15rem;
+  }
+}
+
+/* End with experience page */
+
+/* 
+        Service Section Start
+*/
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service {
+  background: var(--color-bg-variant);
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid var(--color-primary);
+  height: fit-content;
+  transition: var(--transition);
+}
+
+.service:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.service__head {
+  background: var(--color-primary);
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service__head h3 {
+  color: var(--color-bg);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.service__list {
+  padding: 2rem;
+}
+
+.service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.service__list__icon {
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+.service__list p {
+  font-size: 0.9rem;
+}
+
+/* for small devices */
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .service {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ========================== Portfolio Style start ============================== */
+
+.portfolio__item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  
+}
+.portfolio__item h3{
+  margin-top: 1rem;
+}
+.portfolio__item__cta{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width:900px){
+  .portfolio__item{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width:678px){
+  .portfolio__item{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+/* 
+
+============================ Testimonials Section Styles ====================
+*/
+
+
+.testimonials__container{
+  width: 40%;
+}
+.client__avatar{
+  width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primary-variant);
+}
+
+.testimonial{
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+}
+
+.client__review{
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullets{
+  background: var(--color-bg-variant);
+  color: var(--color-bg);
+}
+
+@media screen and (max-width:1024px){
+  .testimonials__container{
+    width: 60%;
+  }
+}
+@media screen and (max-width:678px){
+      .testimonials__container{
+        width: var(--container-width-sm);
+      }
+      .client__review{
+        width: var(--container-width-sm);
+      }
+}
+
+
+
+
+
+/* 
+=============================== Contact Section ===================
+*/
+
+
+
+.contact__container{
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact__options{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__option{
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.contact__option:hover{
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+.contact__option__icon{
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.contact__option a {
+  margin-top: .7rem;
+  display: inline-block;
+  font-size: .8rem;
+}
+
+/*  ========================= Contact Form ===================== */
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,textarea{
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-light);
+}
+
+@media screen and (max-width:1024px) {
+  .contact__container{
+    grid-template-columns: 1fr;
+    /* gap: 2rem; */
+  }
+}
